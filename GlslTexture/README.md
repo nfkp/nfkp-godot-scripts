@@ -99,3 +99,5 @@ void main() {
     FragColor = vec4(vec3(pct) * 0.5, 1.0);
 }
 ```
+# Bibliography
+[model](https://github.com/godotengine/godot-demo-projects/blob/master/misc/compute_shader_heightmap/main.gd)
