@@ -100,4 +100,4 @@ void main() {
 }
 ```
 # Bibliography
-[model](https://github.com/godotengine/godot-demo-projects/blob/master/misc/compute_shader_heightmap/main.gd)
+[Godot Heightmap Demo](https://github.com/godotengine/godot-demo-projects/blob/master/misc/compute_shader_heightmap/main.gd)
