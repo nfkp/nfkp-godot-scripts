@@ -8,6 +8,20 @@ Use this function to write to a texture variable:
 func glsl_write_to_texture(path: String, resolution: int = 512, uniform_data : PackedByteArray = PackedByteArray([])) -> ImageTexture
 ```
 
+Ex:
+```GDScript
+#Set texture rapidly at ready to one shader to another and then back to the last.
+func set_texture(path : String) -> void:
+	var tex := GlslTexture.glsl_write_to_texture(path, 2048)
+	var mat : ShaderMaterial = get_active_material(0)
+	mat.set_shader_parameter("tex", tex)
+
+func _ready() -> void:
+	set_texture("res://shader.glsl")
+	set_texture("res://shader2.glsl")
+	set_texture("res://shader.glsl")
+	GlslTexture.cleanup_gpu()
+```
 Use `cleanup_gpu()` to avoid leaking in memory the Resource IDs that were generated as a result of calling the write function for the first time. Do this after you finish writing to all your texture variables.
 ## Parameters
 ### path
