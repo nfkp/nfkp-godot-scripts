@@ -4,7 +4,7 @@ Write to a texture with GLSL shader code in Godot. This may be used as a materia
 It's a little like a c++ object but doesn't take care of it's own memory.
 
 Use this function to write to a texture variable:
-```
+```GDScript
 func glsl_write_to_texture(path: String, resolution: int = 512, uniform_data : PackedByteArray = PackedByteArray([])) -> ImageTexture
 ```
 
