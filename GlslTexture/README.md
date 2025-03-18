@@ -45,7 +45,6 @@ u_data.append_array(PackedByteArray([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])) # fil
 There is a vertex shader I copied and pasted from Vulkan Tutorial which makes a triangle, except I made it cover the whole screen.
 
 The fragment shader starts with the GLSL version. FragColor is the equivalent of the `vec3 out ALBEDO` variable from GDShaders, but with an alpha channel.
-Ex:
 ```GLSL
 #[vertex] // Use these heading tags to seperate vertex and fragment shaders
 #version 460
