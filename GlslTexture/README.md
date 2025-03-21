@@ -85,13 +85,11 @@ mat2 rotate2d(const in float r){
 
 void main() {
 	vec2 st = gl_FragCoord.xy * u_buffer.px_size; st.y = 1. - st.y;
-    st.x *= 1.5;
-    st *= 10.;
+    st *= vec2(15., 10.);
 
     vec2 i = floor(st);
-    vec2 f = fract(st);
-    f -= 0.5;
-    float rand = random(i);;
+    vec2 f = fract(st) - 0.5;
+    float rand = random(i);
     rand = floor(rand * 4.) * 0.5 * PI + 0.25 * PI;
     f = rotate2d(rand) * f;
     float pct = sign(-f.x);
