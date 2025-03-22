@@ -1,5 +1,5 @@
 extends Node
-# By: S. Zarfeen Hossain (soka-nfkp)
+# By: S. Zarfeen Hossain
 var rd: RenderingDevice
 var shader_rid: RID
 var image_rid: RID
