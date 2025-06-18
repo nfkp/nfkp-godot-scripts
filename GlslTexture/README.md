@@ -32,8 +32,8 @@ Resolution of texture. The shader writes to a square texture. The default value 
 Data sent to the uniform buffer, whose memory is organized in the std140 layout. By default the `glsl_write_to_texture()` function sends a uniform with the resolution in it. The size of uniform buffers are rounded up to a multiple of the size of a vec4. You'll have to add filler data so the data is organized in blocks of 16 bytes.
 
 [From wiki:](https://www.khronos.org/opengl/wiki/Interface_Block_(GLSL))
-The rules for std140 layout are covered quite well in the OpenGL specification ([OpenGL 4.5, Section 7.6.2.2, page 137](https://registry.khronos.org/OpenGL/specs/gl/glspec45.core.pdf#page=159)). Among the most important is the fact that arrays of types are not necessarily tightly packed. An array of floats in such a block will not be the equivalent to an array of floats in C/C++. The array stride (the bytes between array elements) is always rounded up to the size of a vec4 (ie: 16-bytes). So arrays will only match their C/C++ definitions if the type is a multiple of 16 bytes
-	**Warning:** Implementations sometimes get the std140 layout wrong for vec3 components. You are advised to manually pad your structures/arrays out and avoid using vec3 at all.
+"The rules for std140 layout are covered quite well in the OpenGL specification ([OpenGL 4.5, Section 7.6.2.2, page 137](https://registry.khronos.org/OpenGL/specs/gl/glspec45.core.pdf#page=159)). Among the most important is the fact that arrays of types are not necessarily tightly packed. An array of floats in such a block will not be the equivalent to an array of floats in C/C++. The array stride (the bytes between array elements) is always rounded up to the size of a vec4 (ie: 16-bytes). So arrays will only match their C/C++ definitions if the type is a multiple of 16 bytes
+	**Warning:** Implementations sometimes get the std140 layout wrong for vec3 components. You are advised to manually pad your structures/arrays out and avoid using vec3 at all."
 
 Ex:
 ```GDScript
