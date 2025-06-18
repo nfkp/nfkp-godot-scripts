@@ -64,7 +64,7 @@ void main() {
 
 layout(location = 0) out vec4 FragColor;
 
-// This is the uniform buffer that needs to match the data being sent
+// This is the uniform buffer that needs to match the data being sent by the GDScript
 layout(set = 0, binding = 0, std140) uniform uniform_buffer {
     float px_size;
 } u_buffer;
