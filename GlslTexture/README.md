@@ -27,7 +27,7 @@ Use `cleanup_gpu()` to avoid leaking in memory the Resource IDs that were genera
 ### path
 path to glsl file. Ex: `"res://shader.glsl"`
 ### resolution
-Resolution of texture. The shader writes to a square texture. The default value is 512 by 512 px.
+Resolution of texture. The shader writes to a square texture. The default value is 512x512.
 ### uniform_data
 Data sent to the uniform buffer, whose memory is organized in the std140 layout. By default the `glsl_write_to_texture()` function sends a uniform with the resolution in it. The size of uniform buffers are rounded up to a multiple of the size of a vec4. You'll have to add filler data so the data is organized in blocks of 16 bytes.
 
